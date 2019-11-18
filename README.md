@@ -1,1 +1,1 @@
-# commitlint-config
+# @lcooper/commitlint-config

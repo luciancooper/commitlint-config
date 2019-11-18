@@ -1,0 +1,22 @@
+{
+  "name": "@lcooper/commitlint-config",
+  "version": "1.0.0",
+  "description": "Shareable commitlint config for enforcing conventional commits",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciancooper/commitlint-config.git"
+  },
+  "keywords": [
+    "commitlint",
+    "commitlint-config"
+  ],
+  "author": "Lucian Cooper <cooperlucian@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luciancooper/commitlint-config/issues"
+  },
+  "homepage": "https://github.com/luciancooper/commitlint-config#readme"
+}
