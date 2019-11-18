@@ -2,6 +2,7 @@
   "name": "@lcooper/commitlint-config",
   "version": "1.0.0",
   "description": "Shareable commitlint config for enforcing conventional commits",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,25 @@
   "bugs": {
     "url": "https://github.com/luciancooper/commitlint-config/issues"
   },
-  "homepage": "https://github.com/luciancooper/commitlint-config#readme"
+  "homepage": "https://github.com/luciancooper/commitlint-config#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "./index.js"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/config-conventional": "^8.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "husky": "^3.1.0"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": ">= 8"
+  }
 }
