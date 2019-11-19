@@ -1,5 +1,8 @@
 # @lcooper/commitlint-config
 
+[![npm][npm-badge]][npm-link]
+[![license][license-badge]][license-link]
+
 A sharable [commitlint](https://commitlint.js.org) config to enforce [conventional commits](https://conventionalcommits.org). Use with [`@commitlint/cli`](https://www.npmjs.com/package/@commitlint/cli).
 
 ## Installation
@@ -98,3 +101,8 @@ This config extends [`@commitlint/config-conventional`](https://www.npmjs.com/pa
 |`style`   |Styles                  |Formatting and white-space changes                           |
 |`test`    |Tests                   |Adding missing tests or correcting existing tests            |
 |`update`  |Code Updates            |A code improvement that does not add a new feature           |
+
+[npm-link]: https://www.npmjs.com/package/@lcooper/commitlint-config
+[npm-badge]: https://img.shields.io/npm/v/@lcooper/commitlint-config?logo=npm&style=for-the-badge
+[license-link]: LICENSE
+[license-badge]: https://img.shields.io/github/license/luciancooper/commitlint-config?color=brightgreen&style=for-the-badge
