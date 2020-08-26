@@ -102,6 +102,8 @@ This config extends [`@commitlint/config-conventional`](https://www.npmjs.com/pa
 |`test`    |Tests                   |Adding missing tests or correcting existing tests            |
 |`update`  |Code Updates            |A code improvement that does not add a new feature           |
 
+Additionally, the max line length of commit message bodies and footers is `72` characters to enforce wrapping.
+
 [npm-link]: https://www.npmjs.com/package/@lcooper/commitlint-config
 [npm-badge]: https://img.shields.io/npm/v/@lcooper/commitlint-config?logo=npm&style=for-the-badge
 [license-link]: LICENSE
