@@ -2,10 +2,14 @@
   "name": "@lcooper/commitlint-config",
   "version": "1.1.0",
   "description": "Shareable commitlint config for enforcing conventional commits",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "publishConfig": {
     "access": "public"
@@ -30,15 +34,15 @@
     ]
   },
   "dependencies": {
-    "@commitlint/config-conventional": "^10.0.0"
+    "@commitlint/config-conventional": "^19.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^10.0.0",
+    "@commitlint/cli": "^19.2.1",
     "@lcooper/eslint-config": "^3.0.0",
     "eslint": "^8.57.0",
     "husky": "^9.0.11"
   },
   "peerDependencies": {
-    "@commitlint/cli": ">= 8"
+    "@commitlint/cli": ">=19"
   }
 }

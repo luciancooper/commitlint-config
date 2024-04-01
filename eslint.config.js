@@ -1,3 +1,5 @@
-module.exports = [
-    ...require('@lcooper/eslint-config'),
+import base from '@lcooper/eslint-config';
+
+export default [
+    ...base,
 ];
