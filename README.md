@@ -1,16 +1,21 @@
 # @lcooper/commitlint-config
 
-[![npm][npm-badge]][npm-link]
-[![license][license-badge]][license-link]
+[![ci](https://img.shields.io/github/actions/workflow/status/luciancooper/commitlint-config/ci.yml?logo=github&style=for-the-badge)](https://github.com/luciancooper/commitlint-config/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@lcooper/commitlint-config?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/@lcooper/commitlint-config)
+[![license](https://img.shields.io/github/license/luciancooper/commitlint-config?color=brightgreen&style=for-the-badge)](#license)
 
 A sharable [commitlint](https://commitlint.js.org) config to enforce [conventional commits](https://conventionalcommits.org). Use with [`@commitlint/cli`](https://www.npmjs.com/package/@commitlint/cli).
 
 ## Installation
 
-Install with npm:
-
+> Install with npm:
 ```bash
 npm install --save-dev @commitlint/cli @lcooper/commitlint-config
+```
+
+> Install with yarn:
+```bash
+yarn add -D @commitlint/cli @lcooper/commitlint-config
 ```
 
 ## Usage
@@ -47,11 +52,15 @@ module.exports = {
 };
 ```
 
-Check out the [commitlint docs](https://commitlint.js.org/#/concepts-shareable-config) for more details about sharable configs.
+Check out the [commitlint docs](https://commitlint.js.org/concepts/shareable-config.html) for more details about sharable configs.
 
 ## Usage with Husky
 
-To configure a [`husky`](https://github.com/typicode/husky) commit message hook, add the following field to your `package.json`:
+You can configure a git commit message hook using [`husky`](https://github.com/typicode/husky), just add it as a `devDependency`.
+
+If you are using `husky@v9`, follow the instructions on commitlints local setup [documentation page](https://commitlint.js.org/guides/local-setup.html).
+
+To configure a husky commit message hook with `husky@v4`, add the following field to your `package.json`:
 
 ```json
 "husky": {
@@ -59,28 +68,6 @@ To configure a [`husky`](https://github.com/typicode/husky) commit message hook,
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   }
 }
-```
-
-Or add a husky config file to your project root:
-
-`.huskyrc`
-
-```json
-{
-  "hooks": {
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-  }
-}
-```
-
-`.huskyrc.js`
-
-```javascript
-module.exports = {
-    hooks: {
-        'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-    },
-};
 ```
 
 ## Rules
@@ -104,7 +91,6 @@ This config extends [`@commitlint/config-conventional`](https://www.npmjs.com/pa
 
 Additionally, the max line length of commit message headers, bodies and footers is `72` characters to enforce wrapping.
 
-[npm-link]: https://www.npmjs.com/package/@lcooper/commitlint-config
-[npm-badge]: https://img.shields.io/npm/v/@lcooper/commitlint-config?logo=npm&style=for-the-badge
-[license-link]: LICENSE
-[license-badge]: https://img.shields.io/github/license/luciancooper/commitlint-config?color=brightgreen&style=for-the-badge
+## License
+
+[MIT](LICENSE)
