@@ -91,6 +91,7 @@ This config extends [`@commitlint/config-conventional`](https://www.npmjs.com/pa
 |----------|------------------------|-------------------------------------------------------------|
 |`build`   |Builds                  |Changes that affect the build system or external dependencies|
 |`chore`   |Chores                  |Other changes that don't modify src or test files            |
+|`ci`      |Continuous Integration  |Changes to continuous integration files and scripts          |
 |`docs`    |Documentation           |Changes to documentation                                     |
 |`feat`    |Features                |A new feature                                                |
 |`fix`     |Bug Fixes               |A bug fix                                                    |
@@ -100,9 +101,8 @@ This config extends [`@commitlint/config-conventional`](https://www.npmjs.com/pa
 |`revert`  |Reverts                 |Reverts a previous commit                                    |
 |`style`   |Styles                  |Formatting and white-space changes                           |
 |`test`    |Tests                   |Adding missing tests or correcting existing tests            |
-|`update`  |Code Updates            |A code improvement that does not add a new feature           |
 
-Additionally, the max line length of commit message bodies and footers is `72` characters to enforce wrapping.
+Additionally, the max line length of commit message headers, bodies and footers is `72` characters to enforce wrapping.
 
 [npm-link]: https://www.npmjs.com/package/@lcooper/commitlint-config
 [npm-badge]: https://img.shields.io/npm/v/@lcooper/commitlint-config?logo=npm&style=for-the-badge

@@ -14,6 +14,7 @@ describe('types', () => {
         await expect(lintMsg('fix: bug fixes')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('test: changes to tests')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('build: build system')).resolves.toHaveLintReport({ valid: true });
+        await expect(lintMsg('ci: continuous integration')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('perf: performance improvements')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('chore: miscellaneous chores')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('docs: documentation changes')).resolves.toHaveLintReport({ valid: true });
@@ -21,7 +22,6 @@ describe('types', () => {
         await expect(lintMsg('release: new releases')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('revert: code reversions')).resolves.toHaveLintReport({ valid: true });
         await expect(lintMsg('style: style changes')).resolves.toHaveLintReport({ valid: true });
-        await expect(lintMsg('update: code updates')).resolves.toHaveLintReport({ valid: true });
     });
 
     test('lints invalid types', async () => {
@@ -58,6 +58,10 @@ describe('subject', () => {
 describe('header', () => {
     test('lints headers with trailing whitespace', async () => {
         await expect(lintMsg('feat: a new feature ')).resolves.toHaveLintReport({ valid: false, errors: 1 });
+    });
+
+    test('lints headers that are too long', async () => {
+        await expect(lintMsg(`feat: ${'x'.repeat(80)}`)).resolves.toHaveLintReport({ valid: false, errors: 1 });
     });
 });
 
